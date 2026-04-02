@@ -64,9 +64,23 @@ Règles absolues :
       text: response.output_text
     });
   } catch (error) {
-    console.error(error);
+    console.error("Erreur OpenAI complète :", error);
+
+    if (error?.status) {
+      console.error("Status :", error.status);
+    }
+
+    if (error?.message) {
+      console.error("Message :", error.message);
+    }
+
+    if (error?.error) {
+      console.error("Error object :", error.error);
+    }
+
     res.status(500).json({
-      error: "Impossible de générer l’interprétation."
+      error: "Impossible de générer l’interprétation.",
+      details: error?.message || "Erreur inconnue"
     });
   }
 });
