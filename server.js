@@ -41,6 +41,11 @@ Règles absolues :
 - La lecture doit rester fidèle aux informations fournies pour chaque carte.
 - La synthèse finale doit relier les trois cartes entre elles.
 - La question finale doit être brève, forte et introspective.
+- Tu t'adresses directement à la personne en disant "tu".
+- N'utilise aucun markdown.
+- Pas de titres avec ###.
+- Pas de gras avec **.
+- Ecris en texte brut uniquement.
 `;
 
     const response = await client.responses.create({
