@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Riddle Arcana backend is running.");
 });
 
-app.post("/api/riddle-interpretation", async (req, res) => {
+app.post("/api/interpretation", async (req, res) => {
   try {
     const { positions, question_utilisateur } = req.body;
 
